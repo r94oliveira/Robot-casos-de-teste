@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220820 20:16:27.574" rpa="false" schemaversion="3">
+<suite id="s1" name="Ru Testes" source="C:\Users\robson.mariano\Downloads\Myself\UFPR\2022-3\ENG SOF 2\robot\task3-cardapio-ru\ru_testes.robot">
+<test id="s1-t1" name="CASO DE TESTE 1: Acessar o cardápio do RU" line="9">
+<kw name="Abrir o navegador" library="ru_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220820 20:16:28.368" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220820 20:16:28.368" endtime="20220820 20:16:31.588"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220820 20:16:31.588" endtime="20220820 20:16:31.725"/>
+</kw>
+<status status="PASS" starttime="20220820 20:16:28.367" endtime="20220820 20:16:31.725"/>
+</kw>
+<kw name="Acessar o site do RU" library="ru_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220820 20:16:31.726" level="INFO">Opening url 'https://pra.ufpr.br/ru/'</msg>
+<status status="PASS" starttime="20220820 20:16:31.726" endtime="20220820 20:16:35.073"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220820 20:16:35.091" level="INFO">Page title is 'Restaurante Universitário'.</msg>
+<status status="PASS" starttime="20220820 20:16:35.074" endtime="20220820 20:16:35.092"/>
+</kw>
+<status status="PASS" starttime="20220820 20:16:31.726" endtime="20220820 20:16:35.092"/>
+</kw>
+<kw name="Clicar no menu cardápio" library="ru_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220820 20:16:35.095" level="INFO">Clicking element '(//a[@title='Cardápio'][contains(.,'Cardápio')])[2]'.</msg>
+<status status="PASS" starttime="20220820 20:16:35.094" endtime="20220820 20:16:36.487"/>
+</kw>
+<status status="PASS" starttime="20220820 20:16:35.093" endtime="20220820 20:16:36.487"/>
+</kw>
+<kw name="Verificar se a página de cardápio foi disponibilizada" library="ru_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TITULO_CARDAPIO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220820 20:16:36.489" endtime="20220820 20:16:36.529"/>
+</kw>
+<status status="PASS" starttime="20220820 20:16:36.488" endtime="20220820 20:16:36.529"/>
+</kw>
+<kw name="Fechar o navegador" library="ru_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220820 20:16:36.793" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220820 20:16:36.531" endtime="20220820 20:16:36.793"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220820 20:16:36.794" endtime="20220820 20:16:40.215"/>
+</kw>
+<status status="PASS" starttime="20220820 20:16:36.530" endtime="20220820 20:16:40.216"/>
+</kw>
+<doc>Acessa o cardápio</doc>
+<tag>cardapio</tag>
+<tag>ru</tag>
+<status status="PASS" starttime="20220820 20:16:28.366" endtime="20220820 20:16:40.216"/>
+</test>
+<test id="s1-t2" name="CASO DE TESTE 2: Verificar Café da manhã Politécnico" line="16">
+<kw name="Abrir o navegador" library="ru_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220820 20:16:40.222" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220820 20:16:40.222" endtime="20220820 20:16:42.890"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220820 20:16:42.890" endtime="20220820 20:16:43.024"/>
+</kw>
+<status status="PASS" starttime="20220820 20:16:40.221" endtime="20220820 20:16:43.025"/>
+</kw>
+<kw name="Acessar o site do RU do centro politécnico" library="ru_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL-POLI}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220820 20:16:43.028" level="INFO">Opening url 'https://pra.ufpr.br/ru/ru-centro-politecnico/'</msg>
+<status status="PASS" starttime="20220820 20:16:43.028" endtime="20220820 20:16:46.752"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//h2[contains(.,'Cardápio RU Centro Politécnico')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220820 20:16:46.752" endtime="20220820 20:16:46.805"/>
+</kw>
+<status status="PASS" starttime="20220820 20:16:43.026" endtime="20220820 20:16:46.806"/>
+</kw>
+<kw name="Verificar se o cardápio do café da manhã para o dia atual está disponível" library="ru_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//h2[contains(.,'Cardápio RU Centro Politécnico')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220820 20:16:46.807" endtime="20220820 20:16:46.838"/>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<var>${DIA}</var>
+<arg>format=day</arg>
+<doc>Returns the given time in the requested format.</doc>
+<msg timestamp="20220820 20:16:46.839" level="INFO">${DIA} = 20</msg>
+<status status="PASS" starttime="20220820 20:16:46.838" endtime="20220820 20:16:46.839"/>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<var>${MES}</var>
+<arg>format=month</arg>
+<doc>Returns the given time in the requested format.</doc>
+<msg timestamp="20220820 20:16:46.839" level="INFO">${MES} = 08</msg>
+<status status="PASS" starttime="20220820 20:16:46.839" endtime="20220820 20:16:46.839"/>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<var>${ANO}</var>
+<arg>format=year</arg>
+<doc>Returns the given time in the requested format.</doc>
+<msg timestamp="20220820 20:16:46.839" level="INFO">${ANO} = 2022</msg>
+<status status="PASS" starttime="20220820 20:16:46.839" endtime="20220820 20:16:46.840"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>message=A data atual é ${DIA}/${MES}/${ANO}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220820 20:16:46.840" level="INFO">A data atual é 20/08/2022</msg>
+<status status="PASS" starttime="20220820 20:16:46.840" endtime="20220820 20:16:46.840"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220820 20:16:46.840" endtime="20220820 20:16:46.856"/>
+</kw>
+<status status="PASS" starttime="20220820 20:16:46.807" endtime="20220820 20:16:46.856"/>
+</kw>
+<kw name="Fechar o navegador" library="ru_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220820 20:16:47.075" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220820 20:16:46.857" endtime="20220820 20:16:47.075"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220820 20:16:47.075" endtime="20220820 20:16:49.936"/>
+</kw>
+<status status="PASS" starttime="20220820 20:16:46.857" endtime="20220820 20:16:49.936"/>
+</kw>
+<doc>Verifica café da manhã</doc>
+<tag>cafe</tag>
+<tag>ru</tag>
+<status status="PASS" starttime="20220820 20:16:40.220" endtime="20220820 20:16:49.937"/>
+</test>
+<test id="s1-t3" name="CASO DE TESTE 3: Pesquisar preços" line="22">
+<kw name="Abrir o navegador" library="ru_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220820 20:16:49.943" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220820 20:16:49.942" endtime="20220820 20:16:52.721"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220820 20:16:52.722" endtime="20220820 20:16:52.850"/>
+</kw>
+<status status="PASS" starttime="20220820 20:16:49.942" endtime="20220820 20:16:52.851"/>
+</kw>
+<kw name="Acessar o site do RU" library="ru_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220820 20:16:52.854" level="INFO">Opening url 'https://pra.ufpr.br/ru/'</msg>
+<status status="PASS" starttime="20220820 20:16:52.854" endtime="20220820 20:19:03.525"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220820 20:19:03.534" level="INFO">Page title is 'Restaurante Universitário'.</msg>
+<status status="PASS" starttime="20220820 20:19:03.525" endtime="20220820 20:19:03.534"/>
+</kw>
+<status status="PASS" starttime="20220820 20:16:52.852" endtime="20220820 20:19:03.535"/>
+</kw>
+<kw name="No menu de Pesquisa escrever &quot;Preço RU&quot; e Pesquisar" library="ru_resources" sourcename="No menu de Pesquisa escrever &quot;${TERMO_BUSCA}&quot; e Pesquisar">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[@id='s']</arg>
+<arg>text=${TERMO_BUSCA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220820 20:19:03.536" level="INFO">Typing text 'Preço RU' into text field '//input[@id='s']'.</msg>
+<status status="PASS" starttime="20220820 20:19:03.536" endtime="20220820 20:19:03.708"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=//input[contains(@id,'searchsubmit')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220820 20:19:03.708" level="INFO">Clicking button '//input[contains(@id,'searchsubmit')]'.</msg>
+<status status="PASS" starttime="20220820 20:19:03.708" endtime="20220820 20:19:06.024"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//h3[contains(.,'Resultados da pesquisa')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220820 20:19:06.024" endtime="20220820 20:19:06.070"/>
+</kw>
+<status status="PASS" starttime="20220820 20:19:03.535" endtime="20220820 20:19:06.070"/>
+</kw>
+<kw name="Verificar se a página &quot;Preços&quot; está no resultado da busca" library="ru_resources">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=(//a[@href='https://pra.ufpr.br/ru/precos/'][contains(.,'Preços')])[3]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220820 20:19:06.123" level="INFO">Element '(//a[@href='https://pra.ufpr.br/ru/precos/'][contains(.,'Preços')])[3]' is displayed.</msg>
+<status status="PASS" starttime="20220820 20:19:06.073" endtime="20220820 20:19:06.123"/>
+</kw>
+<status status="PASS" starttime="20220820 20:19:06.072" endtime="20220820 20:19:06.123"/>
+</kw>
+<kw name="Ao clicar, os preços são exibidos" library="ru_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=(//a[@href='https://pra.ufpr.br/ru/precos/'][contains(.,'Preços')])[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220820 20:19:06.125" level="INFO">Clicking element '(//a[@href='https://pra.ufpr.br/ru/precos/'][contains(.,'Preços')])[3]'.</msg>
+<status status="PASS" starttime="20220820 20:19:06.124" endtime="20220820 20:19:06.713"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//h2[contains(.,'Valores cobrados por refeição nos RUs/UFPR')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220820 20:19:06.713" endtime="20220820 20:19:06.744"/>
+</kw>
+<status status="PASS" starttime="20220820 20:19:06.124" endtime="20220820 20:19:06.745"/>
+</kw>
+<kw name="Fechar o navegador" library="ru_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220820 20:19:07.050" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220820 20:19:06.746" endtime="20220820 20:19:07.050"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220820 20:19:07.050" endtime="20220820 20:19:10.250"/>
+</kw>
+<status status="PASS" starttime="20220820 20:19:06.746" endtime="20220820 20:19:10.250"/>
+</kw>
+<doc>Verifica preço ru na pesquisa</doc>
+<tag>pesquisa</tag>
+<tag>preço</tag>
+<tag>ru</tag>
+<status status="PASS" starttime="20220820 20:16:49.940" endtime="20220820 20:19:10.250"/>
+</test>
+<doc>Casos de teste para exemplo de cardápios do RU</doc>
+<status status="PASS" starttime="20220820 20:16:27.577" endtime="20220820 20:19:10.251"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">cafe</stat>
+<stat pass="1" fail="0" skip="0">cardapio</stat>
+<stat pass="1" fail="0" skip="0">pesquisa</stat>
+<stat pass="1" fail="0" skip="0">preço</stat>
+<stat pass="3" fail="0" skip="0">ru</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Ru Testes">Ru Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220905 18:21:26.255" rpa="false" schemaversion="3">
+<suite id="s1" name="Login Testes" source="C:\Users\robson.mariano\Downloads\Myself\UFPR\2022-3\ENG SOF 2\robot\task4-login-github\login_testes.robot">
+<test id="s1-t1" name="CASO DE TESTE 1: Login válido no github" line="14">
+<kw name="Abrir o navegador" library="login_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220905 18:21:27.274" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220905 18:21:27.274" endtime="20220905 18:21:36.318"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220905 18:21:36.318" endtime="20220905 18:21:36.458"/>
+</kw>
+<status status="PASS" starttime="20220905 18:21:27.273" endtime="20220905 18:21:36.458"/>
+</kw>
+<kw name="Acessar o site do github &quot;${URL}&quot;" library="login_resources" sourcename="Acessar o site do github &quot;${URL}&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220905 18:21:36.460" level="INFO">Opening url 'https://github.com/login'</msg>
+<status status="PASS" starttime="20220905 18:21:36.460" endtime="20220905 18:21:37.604"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//h1[contains(.,'Sign in to GitHub')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220905 18:21:37.604" endtime="20220905 18:21:37.652"/>
+</kw>
+<status status="PASS" starttime="20220905 18:21:36.458" endtime="20220905 18:21:37.652"/>
+</kw>
+<kw name="Preencher nome de usuário &quot;${NOME_USUARIO}&quot;" library="login_resources" sourcename="Preencher nome de usuário &quot;${NOME_USUARIO}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[contains(@id,'login_field')]</arg>
+<arg>text=${NOME_USUARIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220905 18:21:37.655" level="INFO">Typing text 'robsonoliveira@ufpr.br' into text field '//input[contains(@id,'login_field')]'.</msg>
+<status status="PASS" starttime="20220905 18:21:37.655" endtime="20220905 18:21:37.762"/>
+</kw>
+<status status="PASS" starttime="20220905 18:21:37.654" endtime="20220905 18:21:37.763"/>
+</kw>
+<kw name="Preencher senha de usuário &quot;${SENHA_USUARIO}&quot;" library="login_resources" sourcename="Preencher senha de usuário &quot;${SENHA_USUARIO}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[contains(@id,'password')]</arg>
+<arg>text=${SENHA_USUARIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220905 18:21:37.765" level="INFO">Typing text 'ufpr2022' into text field '//input[contains(@id,'password')]'.</msg>
+<status status="PASS" starttime="20220905 18:21:37.765" endtime="20220905 18:21:37.852"/>
+</kw>
+<status status="PASS" starttime="20220905 18:21:37.763" endtime="20220905 18:21:37.852"/>
+</kw>
+<kw name="Clicar para logar" library="login_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//input[contains(@type,'submit')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220905 18:21:37.853" level="INFO">Clicking element '//input[contains(@type,'submit')]'.</msg>
+<status status="PASS" starttime="20220905 18:21:37.853" endtime="20220905 18:21:39.933"/>
+</kw>
+<status status="PASS" starttime="20220905 18:21:37.853" endtime="20220905 18:21:39.933"/>
+</kw>
+<kw name="Verificar se logado" library="login_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//span[@class='d-inline d-md-none d-lg-inline'][contains(.,'request')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220905 18:21:39.933" endtime="20220905 18:21:39.970"/>
+</kw>
+<status status="PASS" starttime="20220905 18:21:39.933" endtime="20220905 18:21:39.970"/>
+</kw>
+<kw name="Fechar o navegador" library="login_resources" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220905 18:21:39.971" endtime="20220905 18:21:44.149"/>
+</kw>
+<status status="PASS" starttime="20220905 18:21:39.971" endtime="20220905 18:21:44.149"/>
+</kw>
+<doc>Faz login válido no github</doc>
+<tag>github</tag>
+<tag>login</tag>
+<status status="PASS" starttime="20220905 18:21:27.271" endtime="20220905 18:21:44.149"/>
+</test>
+<doc>Esta suíte de testes verifica o site do github</doc>
+<status status="PASS" starttime="20220905 18:21:26.259" endtime="20220905 18:21:44.152"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">github</stat>
+<stat pass="1" fail="0" skip="0">login</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login Testes">Login Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
